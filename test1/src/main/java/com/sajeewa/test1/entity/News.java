@@ -14,17 +14,12 @@ public class News {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+//
+    private String headline;
+//
 
-    private String title;
-
-    @Lob
     private String content;
 
-    private LocalDateTime publishedAt;
-
-    private String authorName;
-
-    private Boolean isPublished;
 
     @ManyToMany(fetch = FetchType.LAZY)
     @JoinTable(
@@ -36,6 +31,5 @@ public class News {
 
     @OneToMany(mappedBy = "news", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Comment> comments;
-
 
 }

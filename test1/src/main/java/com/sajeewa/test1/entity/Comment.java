@@ -14,10 +14,10 @@ public class Comment {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Lob
+//    @Lob
     private String content;
 
-    private LocalDateTime commentedAt;
+//    private LocalDateTime commentedAt;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "news_id", nullable = false)

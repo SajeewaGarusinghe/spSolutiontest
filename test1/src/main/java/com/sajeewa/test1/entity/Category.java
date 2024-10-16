@@ -21,4 +21,6 @@ public class Category {
     private Set<News> news;
 
     // Getters and Setters
+
+
 }

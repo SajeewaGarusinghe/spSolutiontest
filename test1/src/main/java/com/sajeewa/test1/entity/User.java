@@ -23,7 +23,7 @@ public class User {
 
     private String password;
 
-    private LocalDateTime createdAt;
+//    private LocalDateTime createdAt;
 
     @OneToMany(mappedBy = "appUser", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Comment> comments;
